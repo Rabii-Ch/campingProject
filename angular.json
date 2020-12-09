@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "projectNG1"
+    }
+  },
+  "defaultProject": "projectNG1",
+  "cli": {
+    "analytics": "6786bfef-0cfd-40d8-a409-c1d1f0c432e7"
+  }
 }
