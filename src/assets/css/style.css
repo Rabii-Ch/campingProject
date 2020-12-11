@@ -789,8 +789,9 @@ ul {
 /* line 169, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_button.scss */
 
 .btn_4 {
+    border-radius: 4px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     text-transform: capitalize;
     -webkit-transition: 0.5s;
@@ -1022,7 +1023,6 @@ ul {
 .single-blog .tag {
     text-align: left;
     display: inline-block;
-    float: left;
     font-size: 13px;
     font-weight: 300;
     margin-right: 22px;
@@ -4307,7 +4307,7 @@ ul {
 /* line 13, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_regervation_part.scss */
 
 .regervation_part .regervation_part_iner input {
-    color: #888 !important;
+    color: #000 !important;
 }
 
 
@@ -4317,10 +4317,10 @@ ul {
     background-color: transparent;
     color: #888 !important;
     border: 0px solid transparent;
-    border-bottom: 2px solid #a1a5a5;
+    border-bottom: 2px solid white;
     border-radius: 0px;
     padding: .375rem 0rem;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Lora", serif;
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -8437,10 +8437,12 @@ h6 {
 /* line 1, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_breadcrumb.scss */
 
 .breadcrumb_bg {
-    background-image: url("../img/breadcrumb.png");
+    background-image: url("../img/inner-banner.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #000;
+    margin-top: 130px;
 }
 
 
@@ -8463,7 +8465,7 @@ h6 {
     height: 100%;
     background-color: #000;
     content: "";
-    opacity: 0.6;
+    opacity: 0.2;
     z-index: -1;
 }
 
@@ -8871,3 +8873,20 @@ h6 {
 
 
 /*# sourceMappingURL=style.css.map */
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: red;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: red;
+}
