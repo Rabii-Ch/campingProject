@@ -22,6 +22,7 @@ import { EditCircuitComponent } from './component/edit-circuit/edit-circuit.comp
 import { DisplayCircuitComponent } from './component/display-circuit/display-circuit.component';
 import { PannierComponent } from './component/pannier/pannier.component';
 import { MaterielComponent } from './component/materiel/materiel.component';
+import { GuidesComponent } from './component/guides/guides.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MaterielComponent } from './component/materiel/materiel.component';
     EditCircuitComponent,
     DisplayCircuitComponent,
     PannierComponent,
-    MaterielComponent
+    MaterielComponent,
+    GuidesComponent
   ],
   imports: [
     BrowserModule,
