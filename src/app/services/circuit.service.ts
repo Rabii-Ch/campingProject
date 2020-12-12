@@ -11,7 +11,7 @@ export class CircuitService {
 
   // fonction teb3a lbase de donné reel 
   getAllCircuit() {
-    return this.httpClient.get<{ message: string, matches: any }>(`${this.circuitUrl}/allCircuit`);
+    return this.httpClient.get<{ message: string, circuits: any }>(`${this.circuitUrl}/allCircuit`);
 
   }
 

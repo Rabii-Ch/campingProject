@@ -59,6 +59,7 @@ app.post('/addCircuit', (req, res) => {
             date: req.body.date,
             guide: req.body.guide,
             place: req.body.place,
+            price: req.body.price,
 
         })
         // nsejlo l'objet mta3na
