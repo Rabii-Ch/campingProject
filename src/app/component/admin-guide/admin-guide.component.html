@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <td>{{g._id}}</td>
+        <td>{{g.fName}}</td>
+        <td>{{g.lName}}</td>
+        <td>{{g.tel}}</td>
+        <td>{{g.description}}</td>
+        <td>
+            <button class='btn btn-danger' (click)="deleteGuide(g._id)">delete</button>
+        </td>
+        <td>
+            <button class='btn btn-danger' (click)="editGuide(g._id)">edit</button>
+        </td>
+        <td>
+            <button class='btn btn-danger' (click)="displayGuide(g._id)">Display</button>
+        </td>
+    </tr>
+</table>

@@ -9,8 +9,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
-                <app-guide></app-guide>
+
+            <div *ngFor='let g of guides' class="col-lg-4">
+                <app-guide [g]='g'></app-guide>
             </div>
         </div>
     </div>

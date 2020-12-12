@@ -28,6 +28,10 @@ import { EditMaterielComponent } from './component/edit-materiel/edit-materiel.c
 import { DisplayMaterielComponent } from './component/display-materiel/display-materiel.component';
 import { CircuitsComponent } from './component/circuits/circuits.component';
 import { MaterielsComponent } from './component/materiels/materiels.component';
+import { AdminCircuitComponent } from './component/admin-circuit/admin-circuit.component';
+import { AdminGuideComponent } from './component/admin-guide/admin-guide.component';
+import { AdminUserComponent } from './component/admin-user/admin-user.component';
+import { AdminMaterielComponent } from './component/admin-materiel/admin-materiel.component';
 
 
 @NgModule({
@@ -55,7 +59,11 @@ import { MaterielsComponent } from './component/materiels/materiels.component';
     EditMaterielComponent,
     DisplayMaterielComponent,
     CircuitsComponent,
-    MaterielsComponent
+    MaterielsComponent,
+    AdminCircuitComponent,
+    AdminGuideComponent,
+    AdminUserComponent,
+    AdminMaterielComponent
   ],
   imports: [
     BrowserModule,

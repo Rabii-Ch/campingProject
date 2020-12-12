@@ -36,12 +36,12 @@ const routes: Routes = [
   {path:'add-circuit', component: AddCircuitComponent},
   {path:'add-guide', component: AddGuideComponent},
   {path:'add-materiel', component: AddMaterielComponent},
-  {path:'display-circuit', component: DisplayCircuitComponent},
-  {path:'display-guide', component: DisplayGuideComponent},
-  {path:'display-materiel', component: DisplayMaterielComponent},
-  {path:'edit-circuit', component: EditCircuitComponent},
-  {path:'edit-guide', component: EditGuideComponent},
-  {path:'edit-materiel', component: EditMaterielComponent},
+  {path:'display-circuit/:id', component: DisplayCircuitComponent},
+  {path:'display-guide/:id', component: DisplayGuideComponent},
+  {path:'display-materiel/:id', component: DisplayMaterielComponent},
+  {path:'edit-circuit/:id', component: EditCircuitComponent},
+  {path:'edit-guide/:id', component: EditGuideComponent},
+  {path:'edit-materiel/:id', component: EditMaterielComponent},
   {path:'admin', component: AdminComponent},
   {path:'**', component: NotFoundComponent}
 ];

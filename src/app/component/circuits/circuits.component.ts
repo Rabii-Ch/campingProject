@@ -8,7 +8,6 @@ import { CircuitService } from 'src/app/services/circuit.service';
 })
 export class CircuitsComponent implements OnInit {
 
-  @Input() x:any;
   circuits: any;
   constructor(private circuitService: CircuitService) { } //injecter le service playerService dans le constructeur
 

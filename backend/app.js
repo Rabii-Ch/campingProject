@@ -149,7 +149,6 @@ app.get('/allGuides', (req, res) => {
 
 });
 
-
 app.post('/addGuide', (req, res) => {
     // c'est le traitement ici
     console.log(' here adding');
@@ -205,7 +204,7 @@ app.get('/displayGuide/:id', (req, res) => {
 
 app.put('/editGuide/:id', (req, res) => {
     console.log('here in edit', req.params.id);
-    const circuit = new Circuit({
+    const guide = new Guide({
             _id: req.body._id,
             fname: req.body.fName,
             lName: req.body.lName,

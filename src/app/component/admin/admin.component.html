@@ -21,13 +21,13 @@
                 <a class="nav-link active" id="tab--1" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false">Users</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab--2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Matchs</a>
+                <a class="nav-link" id="tab--2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Circuits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab--3" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true">Player</a>
+                <a class="nav-link" id="tab--3" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="true">Guide</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="tab--5" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="true">stadium</a>
+                <a class="nav-link" id="tab--5" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="true">materiel</a>
             </li>
         </ul>
 
@@ -84,38 +84,23 @@
                                 <table class="table table-bordered table-dark">
                                     <tr>
                                         <th>ID</th>
-                                        <th>Team One</th>
-                                        <th>score</th>
-                                        <th>Team two</th>
-                                        <th>delete</th>
+                                        <th>Circuit name</th>
+                                        <th>programme</th>
+                                        <th>date</th>
+                                        <th>guide</th>
+                                        <th>nombre de place</th>
+                                        <th>price</th>
                                         <th>edit</th>
+                                        <th>delete</th>
                                         <th>display</th>
 
                                     </tr>
-                                    <!-- <tr *ngFor='let m of matchs'>
-                                        <td>{{m._id}}</td>
-                                        <td>{{m.teamOne}}</td>
-                                        <td>{{m.scoreOne}}-{{m.scoreTwo}}</td>
-                                        <td>{{m.teamTwo}}</td>
-                                        <td>
-                                            <button class='btn btn-danger' (click)='deleteMatch(m._id)'>delete</button>
-
-                                        </td>
-                                        <td>
-                                            <button class='btn btn-danger' (click)='editMatch(m._id)'>edit</button>
-                                        </td>
-                                        <td>
-                                            <button class='btn btn-succes' (click)='displayMatch(m._id)'>display</button>
-                                        </td>
-
-
-                                    </tr> -->
 
                                 </table>
-                                <div class="academy-tab-text" *ngFor='let m of matchs'>
-
-                                    <app-match [m]='m' (newStadiums)='updateMatchs($event)'></app-match>
+                                <div class="academy-tab-text" *ngFor='let c of circuits'>
+                                    <app-admin-circuit [c]='c' (newCircuits)='updateCircuits($event)'></app-admin-circuit>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -127,63 +112,18 @@
                     <table class="table table-bordered table-dark">
                         <tr>
                             <th width='1100px'>ID</th>
-                            <th width='240px'>Nom</th>
-                            <th width='240px'>prenom</th>
-                            <th width='240px'>age</th>
-                            <th width='240px'>poste</th>
-                            <th width='240px'> image</th>
+                            <th width='240px'>first name</th>
+                            <th width='240px'>last name</th>
+                            <th width='240px'>phone</th>
+                            <th width='240px'>description</th>
                             <th width='240px'> delete</th>
                             <th width='240px'> edit</th>
                             <th width='240px'> display</th>
-
                         </tr>
-
-
-
                     </table>
-                    <div class="academy-tab-text" *ngFor='let j of player'>
-
-                        <app-joueur [j]='j' (newStadiums)='updatePlayers($event)'></app-joueur>
-                        <!-- <table class="table table-bordered table-dark">
-                            <tr>
-                                <th>ID</th>
-                                <th>Nom</th>
-                                <th>prenom</th>
-                                <th>age</th>
-                                <th>poste</th>
-                                <th> image</th>
-                                <th> delete</th>
-                                <th> edit</th>
-                                <th> display</th>
-
-                            </tr>
-                            <tr *ngFor='let j of player'>
-                                <td>{{j._id}}</td>
-                                <td>{{j.nom}}</td>
-                                <td>{{j.prenom}}</td>
-                                <td>{{j.age}}</td>
-                                <td>{{j.poste}}</td>
-                                <td><img src={{j.image}} alt="Image" class="img-fluid" width="50px"></td>
-                                <td>
-                                    <button class='btn btn-danger' (click)='delete(j.id)'>delete</button>
-                                </td>
-                                <td>
-                                    <button class='btn btn-danger' (click)='edit(j.id)'>edit</button>
-                                </td>
-                                <td>
-                                    <button class='btn btn-danger' (click)='display(j.id)'>display</button>
-                                </td>
-
-
-                            </tr>
-
-
-                        </table> -->
-
-
+                    <div class="academy-tab-text" *ngFor='let g of guides'>
+                        <app-admin-guide [g]='g' (newGuides)='updateGuides($event)'></app-admin-guide>
                     </div>
-
-
 
                 </div>
             </div>
@@ -201,15 +141,11 @@
                             <th width='200px'>display</th>
                             <th width='200px'>delete</th>
                             <th width='200px'>edit</th>
-
-
                         </tr>
-
-
                     </table>
-                    <div class="academy-tab-text" *ngFor='let s of stadiums'>
+                    <div class="academy-tab-text" *ngFor='let g of guides'>
 
-                        <app-stadium [y]='s' (newStadiums)='updateStadiums($event)'></app-stadium>
+                        <app-admin-guide [g]='g' (newGuides)='updateGuides($event)'></app-admin-guide>
                     </div>
 
 
