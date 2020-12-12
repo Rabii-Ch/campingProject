@@ -26,6 +26,8 @@ import { GuidesComponent } from './component/guides/guides.component';
 import { AddMaterielComponent } from './component/add-materiel/add-materiel.component';
 import { EditMaterielComponent } from './component/edit-materiel/edit-materiel.component';
 import { DisplayMaterielComponent } from './component/display-materiel/display-materiel.component';
+import { CircuitsComponent } from './component/circuits/circuits.component';
+import { MaterielsComponent } from './component/materiels/materiels.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { DisplayMaterielComponent } from './component/display-materiel/display-m
     GuidesComponent,
     AddMaterielComponent,
     EditMaterielComponent,
-    DisplayMaterielComponent
+    DisplayMaterielComponent,
+    CircuitsComponent,
+    MaterielsComponent
   ],
   imports: [
     BrowserModule,
