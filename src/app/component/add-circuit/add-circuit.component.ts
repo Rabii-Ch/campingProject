@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CircuitService } from 'src/app/services/circuit.service';
 
 @Component({
   selector: 'app-add-circuit',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCircuitComponent implements OnInit {
 
-  constructor() { }
+  circuit: any = {};
+  circuitForm: FormGroup;
+  constructor(private formBuilder: FormBuilder,
+    private circuitservice: CircuitService,
+    private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.circuitForm = this.formBuilder.group({
+
+      name: [''],
+      programme: [''],
+      date: [''],
+      guide: [''],
+      place: ['']
+    })
+  }
+
+  addCircuit() {
+    console.log('here my circuit', this.circuit);
+    this.circuitservice.addCircuit(this.circuit).subscribe(
+      () => {
+        console.log('circuit added succesfuly');
+        this.router.navigate(['admin']);
+        alert('circuit added');
+      })
   }
 
 }

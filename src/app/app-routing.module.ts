@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddCircuitComponent } from './component/add-circuit/add-circuit.component';
 import { AddGuideComponent } from './component/add-guide/add-guide.component';
 import { AddMaterielComponent } from './component/add-materiel/add-materiel.component';
+import { AdminComponent } from './component/admin/admin.component';
 import { CircuitComponent } from './component/circuit/circuit.component';
 import { CircuitsComponent } from './component/circuits/circuits.component';
 import { DisplayCircuitComponent } from './component/display-circuit/display-circuit.component';
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:'edit-circuit', component: EditCircuitComponent},
   {path:'edit-guide', component: EditGuideComponent},
   {path:'edit-materiel', component: EditMaterielComponent},
+  {path:'admin', component: AdminComponent},
   {path:'**', component: NotFoundComponent}
 ];
 

@@ -1,1 +1,43 @@
-<p>add-circuit works!</p>
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Add Circuit</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<pre class="tab"></pre>
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form #circuitForm='ngForm' (ngSubmit)='addCircuit()'>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]='circuit.name' [ngModelOptions]="{standalone: true}" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]='circuit.programme' [ngModelOptions]="{standalone: true}" placeholder="Programme">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" [(ngModel)]='circuit.date' [ngModelOptions]="{standalone: true}" placeholder="Date">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]='circuit.guide' [ngModelOptions]="{standalone: true}" placeholder="Guide">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" [(ngModel)]='circuit.place' [ngModelOptions]="{standalone: true}" placeholder="Nombre de Place ">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="Add Circuit">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
