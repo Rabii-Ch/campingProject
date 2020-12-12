@@ -7,7 +7,8 @@ const circuitSchema = mongoose.Schema({
     programme: String,
     date: String,
     guide: String,
-    place: String //attribut pour image
+    place: String,
+    price: String
 });
 // Match: nom de modele dans mla base de donnés 
 const circuit = mongoose.model('Circuit', circuitSchema);

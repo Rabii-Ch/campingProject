@@ -8,8 +8,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-lg-6">
-                <app-circuit></app-circuit>
+            <div *ngFor='let c of circuits' class="col-sm-6 col-lg-6">
+                <app-circuit [x]='c'></app-circuit>
             </div>
 
         </div>

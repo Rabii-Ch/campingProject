@@ -23,7 +23,8 @@ export class AddCircuitComponent implements OnInit {
       programme: [''],
       date: [''],
       guide: [''],
-      place: ['']
+      place: [''],
+      price: ['']
     })
   }
 
