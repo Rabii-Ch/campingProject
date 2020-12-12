@@ -23,6 +23,9 @@ import { DisplayCircuitComponent } from './component/display-circuit/display-cir
 import { PannierComponent } from './component/pannier/pannier.component';
 import { MaterielComponent } from './component/materiel/materiel.component';
 import { GuidesComponent } from './component/guides/guides.component';
+import { AddMaterielComponent } from './component/add-materiel/add-materiel.component';
+import { EditMaterielComponent } from './component/edit-materiel/edit-materiel.component';
+import { DisplayMaterielComponent } from './component/display-materiel/display-materiel.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { GuidesComponent } from './component/guides/guides.component';
     DisplayCircuitComponent,
     PannierComponent,
     MaterielComponent,
-    GuidesComponent
+    GuidesComponent,
+    AddMaterielComponent,
+    EditMaterielComponent,
+    DisplayMaterielComponent
   ],
   imports: [
     BrowserModule,
