@@ -12,7 +12,7 @@
     </div>
 </section>
 
-<pre class="tab"></pre>
+<p style='height : 50px'></p>
 
 <section class="regervation_part section_padding">
     <div class="container">
@@ -24,13 +24,13 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-6">
                 <div class="regervation_part_iner">
                     <form [formGroup]='signupForm'>
                         <div class="form-row">
                             <div class="form-group col-md-6 ">
-                                <input type="text" class="form-control" id="" formControlName='firstName' placeholder="First Name *">
+                                <input type="text" class="form-control taha" id="" formControlName='firstName' placeholder="First Name *">
                             </div>
                         </div>
                         <div *ngIf="signupForm.controls['firstName'].invalid && 
@@ -47,7 +47,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 ">
-                                <input type="text" class="form-control" id="" formControlName='lastName' placeholder="Last Name *">
+                                <input type="text" class="form-control taha" id="" formControlName='lastName' placeholder="Last Name *">
                             </div>
                         </div>
                         <div *ngIf="signupForm.controls['lastName'].invalid && 
@@ -64,7 +64,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 ">
-                                <input type="email" class="form-control" id="inputEmail4" formControlName='email' placeholder="Email address *">
+                                <input type="email" class="form-control taha" id="inputEmail4" formControlName='email' placeholder="Email address *">
                             </div>
                         </div>
                         <div *ngIf="signupForm.controls['email'].invalid && 
@@ -80,7 +80,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="password" class="form-control" id="inputPassword4" formControlName='pwd' placeholder="Password *">
+                                <input type="password" class="form-control taha" id="inputPassword4" formControlName='pwd' placeholder="Password *">
                             </div>
                         </div>
                         <div *ngIf="signupForm.controls['pwd'].invalid && 
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="password" class="form-control" id="inputPassword4" formControlName='confirmPwd' placeholder="confirm Password *">
+                                <input type="password" class="form-control taha" id="inputPassword4" formControlName='confirmPwd' placeholder="confirm Password *">
                             </div>
                         </div>
                         <div *ngIf="signupForm.controls['confirmPwd'].invalid && 

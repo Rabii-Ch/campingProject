@@ -208,7 +208,7 @@ app.put('/editGuide/:id', (req, res) => {
     console.log('here in edit', req.params.id);
     const guide = new Guide({
             _id: req.body._id,
-            fname: req.body.fName,
+            fName: req.body.fName,
             lName: req.body.lName,
             tel: req.body.tel,
             description: req.body.description
