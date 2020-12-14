@@ -1,18 +1,35 @@
-<tr>
-    <td>{{c._id}}</td>
-    <td>{{c.name}}</td>
-    <td>{{c.programme}}</td>
-    <td>{{c.date}}</td>
-    <td>{{c.guide}}</td>
-    <td>{{c.place}}</td>
-    <td>{{c.price}}</td>
-    <td>
-        <button class='btn btn-danger' (click)="deleteCircuit(c._id)">delete</button>
-    </td>
-    <td>
-        <button class='btn btn-danger' (click)="editCircuit(c._id)">edit</button>
-    </td>
-    <td>
-        <button class='btn btn-danger' (click)="displayCircuit(c._id)">Display</button>
-    </td>
-</tr>
+<table class="table table-bordered table-dark">
+
+    <tr>
+        <th>ID</th>
+        <th>Circuit name</th>
+        <th>programme</th>
+        <th>date</th>
+        <th>guide</th>
+        <th>nombre de place</th>
+        <th>price</th>
+        <th>edit</th>
+        <th>delete</th>
+        <th>display</th>
+
+    </tr>
+
+    <tr>
+        <td>{{c._id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.programme}}</td>
+        <td>{{c.date}}</td>
+        <td>{{c.guide}}</td>
+        <td>{{c.place}}</td>
+        <td>{{c.price}}</td>
+        <td>
+            <button class='btn btn-danger' (click)="deleteCircuit(c._id)">delete</button>
+        </td>
+        <td>
+            <button class='btn btn-danger' (click)="editCircuit(c._id)">edit</button>
+        </td>
+        <td>
+            <button class='btn btn-danger' (click)="displayCircuit(c._id)">Display</button>
+        </td>
+    </tr>
+</table>

@@ -1,10 +1,24 @@
-<table>
+<table class="table table-bordered table-dark">
+    <tr>
+        <th>ID</th>
+        <th>first name</th>
+        <th>last name</th>
+        <th>phone</th>
+        <th>description</th>
+        <th> delete</th>
+        <th> edit</th>
+        <th> display</th>
+    </tr>
+
+
+
     <tr>
         <td>{{g._id}}</td>
         <td>{{g.fName}}</td>
         <td>{{g.lName}}</td>
         <td>{{g.tel}}</td>
         <td>{{g.description}}</td>
+
         <td>
             <button class='btn btn-danger' (click)="deleteGuide(g._id)">delete</button>
         </td>

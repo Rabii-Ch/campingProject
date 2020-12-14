@@ -37,7 +37,7 @@
                 <div class="academy-tab-content">
                     <!-- Tab Text -->
                     <!-- Contact Form Area -->
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12">
                         <div class="contact-form-area wow fadeInUp" data-wow-delay="100ms">
                             <table class="table table-bordered table-dark">
                                 <tr>
@@ -81,27 +81,10 @@
                     <div class="academy-tab-text">
                         <div class="col-12">
                             <div class="contact-form-area wow fadeInUp" data-wow-delay="100ms">
-                                <table class="table table-bordered table-dark">
-                                    <tr>
-                                        <th width='100px'>ID</th>
-                                        <th>Circuit name</th>
-                                        <th>programme</th>
-                                        <th>date</th>
-                                        <th>guide</th>
-                                        <th>nombre de place</th>
-                                        <th>price</th>
-                                        <th>edit</th>
-                                        <th>delete</th>
-                                        <th>display</th>
 
-                                    </tr>
-                                    <tr>
-                                        <div class="" *ngFor='let c of circuits'>
-                                            <app-admin-circuit [c]='c' (newCircuits)='updateCircuits($event)'></app-admin-circuit>
-                                        </div>
-                                    </tr>
-                                </table>
-
+                                <div class="" *ngFor='let c of circuits'>
+                                    <app-admin-circuit [c]='c' (newCircuits)='updateCircuits($event)'></app-admin-circuit>
+                                </div>
 
                             </div>
                         </div>
@@ -110,22 +93,17 @@
             </div>
             <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab--3">
                 <div class="academy-tab-content">
+
                     <!-- Tab Text -->
-                    <table class="table table-bordered table-dark">
-                        <tr>
-                            <th width='1100px'>ID</th>
-                            <th width='240px'>first name</th>
-                            <th width='240px'>last name</th>
-                            <th width='240px'>phone</th>
-                            <th width='240px'>description</th>
-                            <th width='240px'> delete</th>
-                            <th width='240px'> edit</th>
-                            <th width='240px'> display</th>
-                        </tr>
-                    </table>
-                    <div class="academy-tab-text" *ngFor='let g of guides'>
-                        <app-admin-guide [g]='g' (newGuides)='updateGuides($event)'></app-admin-guide>
+                    <div class="col-12">
+                        <div class="contact-form-area wow fadeInUp" data-wow-delay="100ms">
+                            <div *ngFor='let g of guides'>
+                                <app-admin-guide [g]='g' (newGuides)='updateGuides($event)'></app-admin-guide>
+                            </div>
+                        </div>
+
                     </div>
+
 
                 </div>
             </div>
