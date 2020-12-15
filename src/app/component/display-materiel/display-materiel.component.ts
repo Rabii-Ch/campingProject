@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MaterielService } from 'src/app/services/materiel.service';
 
 @Component({
   selector: 'app-display-materiel',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayMaterielComponent implements OnInit {
 
-  constructor() { }
+  materiel:any;
+  id:any;
+  constructor(
+    private materielService: MaterielService,
+    private activatedRoute:ActivatedRoute
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.materielService.getMaterielById(this.id).subscribe(
+      data=>{
+        this.materiel=data.materiel;
+      }
+    )
   }
 
 }

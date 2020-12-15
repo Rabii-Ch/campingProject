@@ -1,1 +1,10 @@
-<p>materiel works!</p>
+<div class="single_food_item media">
+    <img src="assets/img/TENTE.jpg" height="300px" class="mr-3" alt="...">
+    <div class="media-body align-self-center">
+        <h3>{{m.pName}}</h3>
+        <p>{{m.ref}}</p>
+        <p>{{m.description}}</p>
+        <h5>{{m.price}} DNT </h5>
+        <button class='btn btn-danger' (click)="reserver(m._id)">reserver</button>
+    </div>
+</div>

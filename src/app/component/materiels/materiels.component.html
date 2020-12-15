@@ -1,3 +1,16 @@
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner text-center">
+                    <div class="breadcrumb_iner_item">
+                        <h2>Materiels</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="food_menu gray_bg">
     <div class="container">
         <div class="row justify-content-between">
@@ -8,10 +21,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 col-lg-4">
-                <app-materiel></app-materiel>
+            <div *ngFor='let m of materiels' class="col-sm-6 col-lg-6">
+                <app-materiel [m]='m'></app-materiel>
             </div>
-
         </div>
     </div>
 </section>

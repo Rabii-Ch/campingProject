@@ -111,32 +111,13 @@
             <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab--5">
                 <div class="academy-tab-content">
                     <!-- Tab Text -->
+                    <div class="academy-tab-text" *ngFor='let m of materiels'>
 
-                    <table class="table table-bordered table-dark">
-                        <tr>
-                            <th width='240px'>ID</th>
-                            <th width='190px'>name</th>
-                            <th width='200px'>country</th>
-                            <th width='200px'>capacity</th>
-                            <th width='200px'>display</th>
-                            <th width='200px'>delete</th>
-                            <th width='200px'>edit</th>
-                        </tr>
-                    </table>
-                    <div class="academy-tab-text" *ngFor='let g of guides'>
-
-                        <app-admin-guide [g]='g' (newGuides)='updateGuides($event)'></app-admin-guide>
+                        <app-admin-materiel [m]='m' (newMateriels)='updateMateriels($event)'></app-admin-materiel>
                     </div>
-
-
-
                 </div>
             </div>
-
         </div>
-
-
-
     </div>
 
 </div>

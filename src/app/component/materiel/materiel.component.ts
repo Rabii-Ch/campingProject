@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-materiel',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./materiel.component.css']
 })
 export class MaterielComponent implements OnInit {
-
+  @Input() m:any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  reserver(id:any){
+
   }
 
 }

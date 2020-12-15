@@ -1,1 +1,34 @@
-<p>admin-materiel works!</p>
+<table class="table table-bordered table-dark">
+
+    <tr>
+        <th>ID</th>
+        <th>product name</th>
+        <th>ref</th>
+        <th>QTY</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>edit</th>
+        <th>delete</th>
+        <th>display</th>
+
+    </tr>
+
+    <tr>
+        <td>{{m._id}}</td>
+        <td>{{m.pName}}</td>
+        <td>{{m.ref}}</td>
+        <td>{{m.qty}}</td>
+        <td>{{m.price}}</td>
+        <td>{{m.description}}</td>
+
+        <td>
+            <button class='btn btn-danger' (click)="deleteMateriel(m._id)">delete</button>
+        </td>
+        <td>
+            <button class='btn btn-danger' (click)="editMateriel(m._id)">edit</button>
+        </td>
+        <td>
+            <button class='btn btn-danger' (click)="displayMateriel(m._id)">Display</button>
+        </td>
+    </tr>
+</table>
