@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-materiel',
@@ -7,12 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MaterielComponent implements OnInit {
   @Input() m:any;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
   reserver(id:any){
-
+      this.router.navigate([`reservation/${id}`]);
+    
   }
 
 }

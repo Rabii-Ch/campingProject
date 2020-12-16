@@ -20,6 +20,7 @@ import { MaterielComponent } from './component/materiel/materiel.component';
 import { MaterielsComponent } from './component/materiels/materiels.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { PannierComponent } from './component/pannier/pannier.component';
+import { ReservationMaterielComponent } from './component/reservation-materiel/reservation-materiel.component';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
 
 const routes: Routes = [
@@ -42,6 +43,7 @@ const routes: Routes = [
   {path:'edit-circuit/:id', component: EditCircuitComponent},
   {path:'edit-guide/:id', component: EditGuideComponent},
   {path:'edit-materiel/:id', component: EditMaterielComponent},
+  {path:'reservation/:id', component: ReservationMaterielComponent},
   {path:'admin', component: AdminComponent},
   {path:'**', component: NotFoundComponent}
 ];

@@ -27,22 +27,16 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="regervation_part_iner">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6 ">
-                                <input type="email" class="form-control taha" id="inputEmail4" placeholder="Email address *">
-                            </div>
+                    <form #loginForm="ngForm" (ngSubmit)='loginUser()'>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="login.email" [ngModelOptions]="{standalone: true}" placeholder="Email">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <input type="password" class="form-control taha" id="inputPassword4" placeholder="Password *">
-                            </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" [(ngModel)]="login.pwd" [ngModelOptions]="{standalone: true}" placeholder="Password">
                         </div>
-
-
-
-                        <div class="regerv_btn">
-                            <a href="#" class="btn_4">Login</a>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary py-3 px-5">login</button>
                         </div>
                     </form>
                 </div>
