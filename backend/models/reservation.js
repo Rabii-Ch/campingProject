@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const reservationSchema = mongoose.Schema({
     // S mta3 string kbira 5ater ne5dmo fi dossier.js
     pName: String,
-    qty: String,
+    qtyR: String,
     price: String,
     userID: String,
     materielID: String
