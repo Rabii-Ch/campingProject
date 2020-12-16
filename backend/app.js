@@ -9,6 +9,7 @@ const Circuit = require('./models/circuit');
 const Guide = require('./models/guide');
 const User = require('./models/user');
 const Materiel = require('./models/materiel');
+const Reservation = require('./models/reservation');
 
 const mongoose = require('mongoose');
 
@@ -429,6 +430,105 @@ app.put('/editMateriel/:id', (req, res) => {
     )
 });
 
+//RESERVATION
+app.get('/allReservations', (req, res) => {
+    // c'est le traitement ici
+    console.log('am here');
+    // connect to db and get all matches
+    Reservation.find((err, docs) => {
+        if (err) {
+            console.log('Error', err);
+        } else {
+            // reponse de serveur lil front end
+            res.status(200).json({
+                message: 'here all reservation',
+                materiels: docs
+            });
+        }
+
+    });
+
+
+});
+
+
+app.post('/addReservation', (req, res) => {
+    // c'est le traitement ici
+    console.log(' here adding');
+
+    // creation d'un objet pour inserer dans la base de donnée
+    const reservation = new Reservation({
+            pName: req.body.pName,
+            qtyR: req.body.qtyR,
+            price: req.body.price,
+            userID: req.body.userID,
+            materielID: req.body.materielID
+
+        })
+        // nsejlo l'objet mta3na
+    reservation.save().then((result) => {
+        if (result) {
+            res.status(200).json({
+                message: 'added successfuly',
+            })
+        }
+    });
+});
+
+app.delete('/deleteReservation/:id', (req, res) => {
+    // 9a3din naba3tho fil id dynamique 
+    console.log('here in delete', req.params.id);
+    Reservation.deleteOne({ _id: req.params.id }).then(
+        result => {
+            if (result) {
+                res.status(200).json({
+                    message: 'delete successfully'
+                })
+
+            }
+        }
+    )
+});
+
+app.get('/displayReservation/:id', (req, res) => {
+    // 9a3din naba3tho fil id dynamique 
+    console.log('here in get', req.params.id);
+    // Match.findOne : 9olnelo lawej 
+    Reservation.findOne({ _id: req.params.id }).then(
+        data => {
+            // if data existe
+            if (data) {
+                res.status(200).json({
+                    reservation: data
+                })
+            }
+        }
+    )
+
+});
+
+app.put('/editReservation/:id', (req, res) => {
+    console.log('here in edit', req.params.id);
+    const reservation = new Reservation({
+            _id: req.body._id,
+            pName: req.body.pName,
+            qtyR: req.body.qtyR,
+            price: req.body.price,
+            userID: req.body.userID,
+            materielID: req.body.materielID
+        })
+        // fonction update mche lawej 3al id ili 3ando req.params.id w 3awdho bil match
+    Reservation.update({ _id: req.params.id }, reservation).then(
+        // ba3d meya3mil modification l base de données tolik ahawa resultat 
+        result => {
+            if (result) {
+                res.status(200).json({
+                    message: 'update successfully'
+                })
+            }
+        }
+    )
+});
 
 
 
