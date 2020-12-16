@@ -32,6 +32,7 @@ import { AdminCircuitComponent } from './component/admin-circuit/admin-circuit.c
 import { AdminGuideComponent } from './component/admin-guide/admin-guide.component';
 import { AdminUserComponent } from './component/admin-user/admin-user.component';
 import { AdminMaterielComponent } from './component/admin-materiel/admin-materiel.component';
+import { ReservationMaterielComponent } from './component/reservation-materiel/reservation-materiel.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { AdminMaterielComponent } from './component/admin-materiel/admin-materie
     AdminCircuitComponent,
     AdminGuideComponent,
     AdminUserComponent,
-    AdminMaterielComponent
+    AdminMaterielComponent,
+    ReservationMaterielComponent
   ],
   imports: [
     BrowserModule,
