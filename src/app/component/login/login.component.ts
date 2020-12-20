@@ -34,12 +34,12 @@ export class LoginComponent implements OnInit {
         console.log('here data',data.user[0]); 
         if(data)
         {
-          location.reload();
+          location.replace('');
           localStorage.setItem('connectedUserFname',data.user[0].firstName);
           localStorage.setItem('connectedUserLname',data.user[0].lastName);
-          
+          localStorage.setItem('userID',data.user[0]._id);
         }
-        this.router.navigate(['/']);
+        // this.router.navigate(['']);
       }
     )
     

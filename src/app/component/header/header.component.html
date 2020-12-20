@@ -44,7 +44,8 @@
 
                     </div>
                     <div>
-                        <a *ngIf='firstName' class="nav-link" style="color: red;">Bonjour Mr {{firstName | uppercase }} {{lastName | uppercase }}</a>
+
+                        <a *ngIf='firstName' class="nav-link" style="color: red;"><i class="fa fa-address-book"></i> Bonjour Mr {{firstName | uppercase }} {{lastName | uppercase }}</a>
                     </div>
                     <div class="menu_btn">
                         <a *ngIf='!firstName' routerLink="sign-up" class="btn_1 d-none d-sm-block">Sign Up</a>

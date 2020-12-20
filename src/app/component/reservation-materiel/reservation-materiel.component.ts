@@ -10,7 +10,7 @@ import { ReservationService } from 'src/app/services/reservation.service';
   styleUrls: ['./reservation-materiel.component.css']
 })
 export class ReservationMaterielComponent implements OnInit {
-
+  qtyancienne: number;
   materiel: any = {};
   reservation: any;
   reservationForm: FormGroup;
@@ -29,24 +29,48 @@ export class ReservationMaterielComponent implements OnInit {
         this.materiel = data.materiel;
       }
     )
+    
     this.reservationForm = this.formBuilder.group({
 
-      pName: [''],
-      ref: [''],
-      qtyR: [''],
-      price: [''],
-      description: ['']
-      
-    })
-
+      qtyR: ['']
+    
+    }
+    )
+    
   }
   reserver(){
+    this.reservation={
+      pName : this.materiel.pName,
+      price: this.materiel.price,
+      qtyR: this.reservationForm.value.qtyR,
+      userID: localStorage.getItem("userID"),
+      productID: this.materiel._id
+    }
+    
+    
+    this.qtyancienne=this.materiel.qty;
+   
+    if (Number(this.qtyancienne) >= Number(this.reservation.qtyR) )
+    {
+      this.materiel.qty= this.qtyancienne - this.reservation.qtyR;
+      this.materielService.editMateriel(this.materiel).subscribe(
+        ()=>{
+          alert('material was updated');
+        }
+      )
+    }
+    else
+    {
+      alert('material was not updated, quantity must not exceed: '+this.qtyancienne );
+    }
+    
+
     this.reservationService.addReservation(this.reservation).subscribe(
       ()=>{
         alert('reservation was updated');
-    this.router.navigate(['materiel']);
+    // this.router.navigate(['materiel']);
       }
     )
-      }
+  }
 
 }
