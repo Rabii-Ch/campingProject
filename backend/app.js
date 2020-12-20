@@ -530,6 +530,19 @@ app.put('/editReservation/:id', (req, res) => {
     )
 });
 
+app.post('/login', (req, res) => {
+
+    console.log('req body', req.body); //req.body:bech taffichilna email et pwd
+    User.find({ email: req.body.email, pwd: req.body.pwd }).then(
+        data => {
+            console.log('finded user', data);
+            res.status(200).json({
+                user: data
+            })
+        }
+
+    );
+});
 
 
 

@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  name:string;
+  
   login:any={};
   loginForm:FormGroup;
 
@@ -37,8 +37,9 @@ export class LoginComponent implements OnInit {
           location.reload();
           localStorage.setItem('connectedUserFname',data.user[0].firstName);
           localStorage.setItem('connectedUserLname',data.user[0].lastName);
+          
         }
-        this.router.navigate(['']);
+        this.router.navigate(['/']);
       }
     )
     
