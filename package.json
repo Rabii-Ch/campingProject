@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
     "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.0-beta1",
+    "bootstrap-icons": "^1.2.1",
     "express": "^4.17.1",
     "mogoose": "0.0.1-security",
     "mongoose": "^5.11.6",
