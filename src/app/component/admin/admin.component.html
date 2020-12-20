@@ -82,8 +82,8 @@
                         <div class="col-12">
                             <div class="contact-form-area wow fadeInUp" data-wow-delay="100ms">
 
-                                <div class="" *ngFor='let c of circuits'>
-                                    <app-admin-circuit [c]='c' (newCircuits)='updateCircuits($event)'></app-admin-circuit>
+                                <div class="" *ngFor='let c of circuits; let i=index'>
+                                    <app-admin-circuit [c]='c' [f]='i' (newCircuits)='updateCircuits($event)'></app-admin-circuit>
                                 </div>
 
                             </div>
@@ -97,8 +97,8 @@
                     <!-- Tab Text -->
                     <div class="col-12">
                         <div class="contact-form-area wow fadeInUp" data-wow-delay="100ms">
-                            <div *ngFor='let g of guides'>
-                                <app-admin-guide [g]='g' (newGuides)='updateGuides($event)'></app-admin-guide>
+                            <div *ngFor='let g of guides; let i=index'>
+                                <app-admin-guide [g]='g' [c]='i' (newGuides)='updateGuides($event)'></app-admin-guide>
                             </div>
                         </div>
 
@@ -111,9 +111,9 @@
             <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab--5">
                 <div class="academy-tab-content">
                     <!-- Tab Text -->
-                    <div class="academy-tab-text" *ngFor='let m of materiels'>
+                    <div class="academy-tab-text" *ngFor='let m of materiels;let i=index'>
 
-                        <app-admin-materiel [m]='m' (newMateriels)='updateMateriels($event)'></app-admin-materiel>
+                        <app-admin-materiel [m]='m' [p]='i' (newMateriels)='updateMateriels($event)'></app-admin-materiel>
                     </div>
                 </div>
             </div>

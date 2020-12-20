@@ -10,6 +10,7 @@ import { CircuitService } from 'src/app/services/circuit.service';
 export class AdminCircuitComponent implements OnInit {
 
   @Input() c:any;
+  @Input() f:any;
 @Output() newCircuits: EventEmitter<any> = new EventEmitter();
 
   constructor(private circuitService:CircuitService,

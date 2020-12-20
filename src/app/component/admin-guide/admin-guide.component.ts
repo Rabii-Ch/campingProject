@@ -10,6 +10,7 @@ import { GuideService } from 'src/app/services/guide.service';
 export class AdminGuideComponent implements OnInit {
 
   @Input() g:any;
+  @Input() c:any;
   @Output() newGuides: EventEmitter<any> = new EventEmitter();
   
     constructor(private guideService:GuideService,

@@ -16,17 +16,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <form [formGroup]="reservationForm" #materielForm='ngForm' (ngSubmit)='reserver()'>
+                <form #reservationForm='ngForm' (ngSubmit)='reserver()'>
                     <div class="form-group">
-                        <input type="text" class="form-control" [(ngModel)]='materiel.pName' [ngModelOptions]="{standalone: true}" placeholder="Product Name">
+                        <input type="text" class="form-control" [(ngModel)]='materiel.pName' [ngModelOptions]="{standalone: true}" placeholder="Product Name" readonly>
                     </div>
                     <div class="form-group">
-<<<<<<< HEAD
-                        <input class="form-control" type="number" id="qtyR" formControlName="qtyR">
+                        <input class="form-control" type="number" id="qtyR" [(ngModel)]='reservation.qtyR' [ngModelOptions]="{standalone: true}">
 
-=======
-                        <input type="number" class="form-control" [(ngModel)]='reservation.qtyR' [ngModelOptions]="{standalone: true}" placeholder="quatite">
->>>>>>> f7624efac3950fda563d8f9447158ff3f8038126
                     </div>
                     <div class="regerv_btn">
                         <button type="submit" class="btn_4" value="">Valider la reservation </button>

@@ -10,6 +10,7 @@ import { MaterielService } from 'src/app/services/materiel.service';
 export class AdminMaterielComponent implements OnInit {
 
   @Input() m:any;
+  @Input() p:any;
   @Output() newMateriels: EventEmitter<any> = new EventEmitter();
   
     constructor(private materielService:MaterielService,

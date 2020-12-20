@@ -12,7 +12,7 @@ import { ReservationService } from 'src/app/services/reservation.service';
 export class ReservationMaterielComponent implements OnInit {
   qtyancienne: number;
   materiel: any = {};
-  reservation: any;
+  reservation: any= {};
   reservationForm: FormGroup;
   id: any;
   constructor(private formBuilder: FormBuilder,
@@ -39,10 +39,12 @@ export class ReservationMaterielComponent implements OnInit {
     
   }
   reserver(){
+    console.log('this.reservationForm.value',this.reservation.qtyR);
+    
     this.reservation={
       pName : this.materiel.pName,
       price: this.materiel.price,
-      qtyR: this.reservationForm.value.qtyR,
+      qtyR: this.reservation.qtyR,
       userID: localStorage.getItem("userID"),
       productID: this.materiel._id
     }
@@ -68,7 +70,7 @@ export class ReservationMaterielComponent implements OnInit {
     this.reservationService.addReservation(this.reservation).subscribe(
       ()=>{
         alert('reservation was updated');
-    // this.router.navigate(['materiel']);
+    this.router.navigate(['materiels']);
       }
     )
   }

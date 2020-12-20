@@ -23,7 +23,7 @@
                                 <a class="nav-link" *ngIf='!firstName' routerLink="guides">Guides</a>
                             </li>
                             <li class="nav-item" [routerLinkActive]="['active']">
-                                <a class="nav-link" *ngIf='!firstName' routerLink="materiels">Materiels</a>
+                                <a class="nav-link" *ngIf='firstName' routerLink="materiels">Materiels</a>
                             </li>
                             <li class="nav-item dropdown" [routerLinkActive]="['active']">
                                 <a class="nav-link dropdown-toggle" *ngIf='firstName' routerLink="admin" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,12 +45,8 @@
                     </div>
 
                     <div>
-<<<<<<< HEAD
 
-                        <a *ngIf='firstName' class="nav-link" style="color: red;"><i class="fa fa-address-book"></i> Bonjour Mr {{firstName | uppercase }} {{lastName | uppercase }}</a>
-=======
-                        <a *ngIf='firstName' class="nav-link"><i class="fa fa-user" style="font-size:24px"></i> Bonjour Mr {{firstName | uppercase }} {{lastName | uppercase }}</a>
->>>>>>> f7624efac3950fda563d8f9447158ff3f8038126
+                        <a *ngIf='firstName' class="nav-link" style="color: red;"><i class="fa fa-user"></i> Bonjour Mr {{firstName | uppercase }} {{lastName | uppercase }}</a>
                     </div>
                     <div class="menu_btn">
                         <a *ngIf='!firstName' routerLink="sign-up" class="btn_1 d-none d-sm-block">Sign Up</a>
