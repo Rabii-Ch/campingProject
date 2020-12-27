@@ -442,7 +442,7 @@ app.get('/allReservations', (req, res) => {
             // reponse de serveur lil front end
             res.status(200).json({
                 message: 'here all reservation',
-                materiels: docs
+                reservations: docs
             });
         }
 
@@ -529,6 +529,22 @@ app.put('/editReservation/:id', (req, res) => {
         }
     )
 });
+// app.get('/userReservation', (req, res) => {
+//     // 9a3din naba3tho fil id dynamique 
+//     console.log('here in get', req.params.id);
+//     // Match.findOne : 9olnelo lawej 
+//     Reservation.find({ userID: localStorage.getItem('userID') }).then(
+//         data => {
+//             // if data existe
+//             if (data) {
+//                 res.status(200).json({
+//                     reservations: data
+//                 })
+//             }
+//         }
+//     )
+
+// });
 
 app.post('/login', (req, res) => {
 

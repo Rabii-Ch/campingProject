@@ -46,7 +46,7 @@ export class ReservationMaterielComponent implements OnInit {
       price: this.materiel.price,
       qtyR: this.reservation.qtyR,
       userID: localStorage.getItem("userID"),
-      productID: this.materiel._id
+      materielID: this.materiel._id
     }
     
     

@@ -28,6 +28,10 @@ export class ReservationService {
     return this.httpClient.get<{ reservation: any }>(`${this.reservationUrl}/displayReservation/${id}`);
     // 9a3din ne9blo fi reponse sous format json 5ater naba3tho sous format json
   }
+  // getReservationsByUserId(id: string) {
+  //   return this.httpClient.get<{ reservations: any }>(`${this.reservationUrl}/userReservation`);
+  //   // 9a3din ne9blo fi reponse sous format json 5ater naba3tho sous format json
+  // }
   searchCircuit(term: any) {
     return this.httpClient.get<{ searchedMatches: any }>(`${this.reservationUrl}/api/search/${term}`)
   }

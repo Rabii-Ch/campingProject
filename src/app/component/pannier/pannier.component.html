@@ -1,1 +1,32 @@
-<p>pannier works!</p>
+<div class="whole-wrap">
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <h3 class="mb-30">Table</h3>
+            <div class="progress-table-wrap">
+                <div class="progress-table">
+                    <div class="table-head">
+                        <div class="country">#</div>
+                        <div class="country">Reservation Name</div>
+                        <div class="visit">Price</div>
+                        <div class="visit">Quantity</div>
+                        <div class="visit">Total price</div>
+                        <div class="visit">Cancel reservation</div>
+                    </div>
+                    <div *ngFor='let r of reservations' class="table-row">
+                        <div class="country">{{r._id}}</div>
+                        <div class="country">{{r.pName}}</div>
+                        <div class="visit">{{r.qtyR}}</div>
+                        <div class="visit">{{r.price}}</div>
+                        <div class="visit">{{r.qtyR*r.price}}</div>
+
+                        <div class="visit">
+                            <button class='btn btn-danger' (click)='cancelReservation(r._id)'>cancel</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button>Facturer</button>
+        </div>
+    </div>
+</div>
