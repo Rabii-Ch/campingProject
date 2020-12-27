@@ -44,6 +44,7 @@ const routes: Routes = [
   {path:'edit-guide/:id', component: EditGuideComponent},
   {path:'edit-materiel/:id', component: EditMaterielComponent},
   {path:'reservation/:id', component: ReservationMaterielComponent},
+  {path:'panier/:id', component: PannierComponent},
   {path:'admin', component: AdminComponent},
   {path:'**', component: NotFoundComponent}
 ];
