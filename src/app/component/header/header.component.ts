@@ -30,5 +30,9 @@ actualDate:Date;
     localStorage.removeItem('connectedUserLname');
     location.reload();
   }
+  reservation(){
+    let id=localStorage.getItem('userID');
+    this.router.navigate([`panier/${id}`]);
+  }
 
 }

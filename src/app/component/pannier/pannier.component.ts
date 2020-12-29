@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MaterielService } from 'src/app/services/materiel.service';
 import { ReservationService } from 'src/app/services/reservation.service';
 
@@ -14,28 +14,24 @@ export class PannierComponent implements OnInit {
   materiel:any;
   reservation:any;
   qtyancienne:any;
+  id: any;
 
 
   constructor( private reservationService:ReservationService,
    private materielService:MaterielService,
+   private activated: ActivatedRoute,
     private router:Router ) { }
 
   ngOnInit(){
+    
     this.getReservations();
   }
 
   getReservations(){
-    let userID=localStorage.getItem('userID')
-    this.reservationService.getAllReservations().subscribe(
+    this.id = this.activated.snapshot.paramMap.get('id');
+    this.reservationService.getReservationsByUserId(this.id).subscribe(
       data => {
-        console.log('here my reservations', data.reservations);
-        // if(data.reservations.userID==localStorage.getItem('userID')){
-// console.log('reservation value', data.reservations[3].userID);
-// console.log('localstorage id user',userID);
-          this.reservations = data.reservations;
-
-        
-        
+        this.reservations = data.reservations;
       }
     )
   }
