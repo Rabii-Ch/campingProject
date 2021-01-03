@@ -33,8 +33,6 @@ validator: MustMatch('pwd', 'confirmPwd')
     )
   }
   
-
-
   addUser(user:any){
     //on a fait this.signupForm car c'est un variable globale
     this.userservice.addUser(user).subscribe(

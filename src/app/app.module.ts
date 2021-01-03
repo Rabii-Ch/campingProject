@@ -33,6 +33,7 @@ import { AdminGuideComponent } from './component/admin-guide/admin-guide.compone
 import { AdminUserComponent } from './component/admin-user/admin-user.component';
 import { AdminMaterielComponent } from './component/admin-materiel/admin-materiel.component';
 import { ReservationMaterielComponent } from './component/reservation-materiel/reservation-materiel.component';
+import { FactureComponent } from './component/facture/facture.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { ReservationMaterielComponent } from './component/reservation-materiel/r
     AdminGuideComponent,
     AdminUserComponent,
     AdminMaterielComponent,
-    ReservationMaterielComponent
+    ReservationMaterielComponent,
+    FactureComponent
   ],
   imports: [
     BrowserModule,

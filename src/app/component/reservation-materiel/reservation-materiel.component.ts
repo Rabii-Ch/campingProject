@@ -52,12 +52,18 @@ export class ReservationMaterielComponent implements OnInit {
     
     this.qtyancienne=this.materiel.qty;
    
-    if (Number(this.qtyancienne) >= Number(this.reservation.qtyR) )
+    if (Number(this.qtyancienne) >= Number(this.reservation.qtyR) && Number(this.reservation.qtyR)>0 )
     {
       this.materiel.qty= this.qtyancienne - this.reservation.qtyR;
       this.materielService.editMateriel(this.materiel).subscribe(
         ()=>{
           alert('material was updated');
+        }
+      )
+      this.reservationService.addReservation(this.reservation).subscribe(
+        ()=>{
+          alert('reservation was updated');
+      this.router.navigate(['materiels']);
         }
       )
     }
@@ -67,12 +73,7 @@ export class ReservationMaterielComponent implements OnInit {
     }
     
 
-    this.reservationService.addReservation(this.reservation).subscribe(
-      ()=>{
-        alert('reservation was updated');
-    this.router.navigate(['materiels']);
-      }
-    )
+    
   }
 
 }

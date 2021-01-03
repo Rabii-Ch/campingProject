@@ -12,6 +12,7 @@ import { DisplayMaterielComponent } from './component/display-materiel/display-m
 import { EditCircuitComponent } from './component/edit-circuit/edit-circuit.component';
 import { EditGuideComponent } from './component/edit-guide/edit-guide.component';
 import { EditMaterielComponent } from './component/edit-materiel/edit-materiel.component';
+import { FactureComponent } from './component/facture/facture.component';
 import { GuideComponent } from './component/guide/guide.component';
 import { GuidesComponent } from './component/guides/guides.component';
 import { HomeComponent } from './component/home/home.component';
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path:'reservation/:id', component: ReservationMaterielComponent},
   {path:'panier/:id', component: PannierComponent},
   {path:'admin', component: AdminComponent},
+  {path:'facture', component: FactureComponent},
   {path:'**', component: NotFoundComponent}
 ];
 

@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="clearfix headpadding">
+        <div id="logo">
+            <img src="assets/img/logo.png">
+        </div>
+        <h1>INVOICE 3-2-1</h1>
+        <div id="company" class="clearfix">
+            <div>Company Name</div>
+            <div>455 Foggy Heights,<br /> AZ 85004, US</div>
+            <div>(602) 519-0450</div>
+            <div><a href="mailto:company@example.com">company@example.com</a></div>
+        </div>
+        <div id="project">
+            <div><span>PROJECT</span> Website development</div>
+            <div><span>CLIENT</span> John Doe</div>
+            <div><span>ADDRESS</span> 796 Silver Harbour, TX 79273, US</div>
+            <div><span>EMAIL</span> <a href="mailto:john@example.com">john@example.com</a></div>
+            <div><span>DATE</span> August 17, 2015</div>
+            <div><span>DUE DATE</span> September 17, 2015</div>
+        </div>
+
+    </div>
+    <div class="container">
+        
+            <div class="container"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="service">#</th>
+                        <th class="desc">DESCRIPTION</th>
+                        <th>PRICE</th>
+                        <th>QTY</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let r of reservations">
+                        <td class="service">{{r.materielID}}</td>
+                        <td class="desc">{{r.pName}}Creating a recognizable design solution based on the company's existing visual
+                            identity</td>
+                        <td class="total">{{r.price}} DT</td>
+                        <td class="qty">{{r.qtyR}}</td>
+                        <td class="total">{{r.price*r.qtyR}} DT</td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="4">SUBTOTAL</td>
+                        <td class="total">{{total}} DT</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">TAX 25%</td>
+                        <td class="total">$1,300.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="grand total">GRAND TOTAL</td>
+                        <td class="grand total">$6,500.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="notices">
+                <div>NOTICE:</div>
+                <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+            </div>
+        
+    </div>
+</div>

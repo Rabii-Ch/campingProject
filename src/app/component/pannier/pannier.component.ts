@@ -65,5 +65,8 @@ export class PannierComponent implements OnInit {
         }
       )
   }
+  facture(){
+    this.router.navigate([`facture`]);
+  }
 
 }

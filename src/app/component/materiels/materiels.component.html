@@ -22,7 +22,9 @@
         </div>
         <div class="row">
             <div *ngFor='let m of materiels' class="col-sm-6 col-lg-6">
-                <app-materiel [m]='m'></app-materiel>
+                
+                <app-materiel *ngIf='m.qty>0' [m]='m'></app-materiel>
+            
             </div>
         </div>
     </div>
